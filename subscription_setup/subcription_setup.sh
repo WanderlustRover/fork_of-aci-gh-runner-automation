@@ -14,7 +14,7 @@ az login
 ########################################
 
 export location="uksouth"                                           # This sets the Resource Group and Storage Account location.
-export rgname="example-rg-name"                                              # This sets the Resource Group name the Storage Account will be deployed into.
+export rgname="example-rg-TEST"                                              # This sets the Resource Group name the Storage Account will be deployed into.
 export strname="oowghexample"                                  # This sets the Storage Account name - note this must be unique!
 export containername="tfstate"                                      # This sets the Container name.
 export envtag="Environment=TFStorage"                               # This sets the Environment Tag applied to the Resource Group and Storage Account.
