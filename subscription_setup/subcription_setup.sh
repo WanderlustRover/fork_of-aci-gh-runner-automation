@@ -5,7 +5,6 @@
     # Storage Account and Container to store Terraform State remotely.
     # Creates a Service Principal and then assigns contributor at tenant root. Note: you may wish to reduce this scope for your deployment down to single Subscriptions etc!
     # Please change the variables to suit your requirements!
-    # Test1
  
 az login
 
