@@ -1,1 +1,2 @@
-subscription_setup/my_subscription_setup.sh
+# Ignore Localized subscription_setup
+my_subscription_setup.sh

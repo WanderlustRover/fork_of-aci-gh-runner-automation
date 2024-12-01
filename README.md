@@ -4,3 +4,5 @@ A repository containing the files showing how to use Github Actions and hosted r
 This project has an accompanying blog which details the steps to implement. It can be found here: https://www.linkedin.com/pulse/automate-self-hosted-github-runner-creation-using-owain-osborne-walsh
 
 It is advised to fork this repository in order to make changes to actions and environment variables. 
+
+Modify your subscription_setup.sh via a copy of subscription_setup.sh named my_subscription_setup.sh
