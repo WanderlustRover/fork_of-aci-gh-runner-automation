@@ -1,6 +1,3 @@
-data "azurerm_client_config" "current" {}
-
-
 resource "azurerm_subnet" "runners_subnet" {
   name                 = "runners-subnet"
   resource_group_name  = var.resourceGroupName
@@ -42,7 +39,5 @@ resource "azurerm_container_group" "self_hosted_runners" {
       protocol = "TCP"
     }
       
-}
-
-
+  }
 }
