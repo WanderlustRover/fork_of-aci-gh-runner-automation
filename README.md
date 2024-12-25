@@ -5,4 +5,5 @@ This project has an accompanying blog which details the steps to implement. It c
 
 It is advised to fork this repository in order to make changes to actions and environment variables. 
 
-Modify your subscription_setup.sh via a copy of subscription_setup.sh named my_subscription_setup.sh
+Modify your subscription_setup.sh via a copy of `subscription_setup.sh` named `my_subscription_setup.sh`
+The .gitignore has been updated to ignore `my_subscription_setup.sh`.  
