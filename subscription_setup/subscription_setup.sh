@@ -38,9 +38,9 @@ export location="xxxxxxx"                             # RG and Storage Account r
 
 export coresub_owner_group_name="coresub_owners"      # Entra Group for Owner Role
 export repoFullName="${rootGH}/${adminRepo}"          # Full Core Azure Admin Repo Name
-export rgname="rg-tfstate-core-$location"             # RG name 
-export storage_account_name="coreghatfstate$location" # Note this must be unique!
-export container_name="coreghatfstate"                # Container name.
+export rgname="rg-terraform-core-$location"           # RG name 
+export storage_account_name="coreterraform$location"  # Note this must be unique!
+export container_name="coretfstate"                   # Container name.
 export tfstate_delete_lock_name="delete_lock_tfstate" # Name of delete lock
 export initTag="usage=tfstate managed_by=az_cli"      # Tag on RG & SA 
 

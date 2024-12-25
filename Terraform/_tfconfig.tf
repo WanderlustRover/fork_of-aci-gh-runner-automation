@@ -5,14 +5,13 @@ terraform {
     }
 
     kubernetes = {
-      source  = "hashicorp/kubernetes"
+      source = "hashicorp/kubernetes"
     }
   }
   backend "azurerm" {
-      resource_group_name  = "tfstate"
-      storage_account_name = "tfstate31858"
-      container_name       = "tfstate"
-      key                  = "terraform.tfstate"
+    resource_group_name  = "rg-terraform-core-eastus2"
+    storage_account_name = "coreterraformeastus2"
+    container_name       = "coretfstate"
   }
 }
 

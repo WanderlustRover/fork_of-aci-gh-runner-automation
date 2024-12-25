@@ -1,6 +1,11 @@
 variable "location" {
-  type    = string
-  default = "EastUs"
+  type = string
+
+
+  validation {
+    condition     = contains(["item1", "item2", "item3"], var.test_variable)
+    error_message = "Valid values for var: test_variable are (item1, item2, item3)."
+  }
 }
 
 variable "rg_name" {
@@ -9,15 +14,15 @@ variable "rg_name" {
 }
 
 variable "vnet_name" {
-  type = string
+  type    = string
   default = "test-vnet"
-  
+
 }
 
-variable gh_pat {
-    default = ""
+variable "gh_pat" {
+  default = ""
 }
 
-variable gh_repo_url {
-    default = ""
+variable "gh_repo_url" {
+  default = ""
 }
