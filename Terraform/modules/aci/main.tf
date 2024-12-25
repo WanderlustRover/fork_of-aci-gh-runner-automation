@@ -1,6 +1,3 @@
-data "azurerm_client_config" "current" {}
-
-
 resource "azurerm_subnet" "runners_subnet" {
   name                 = "runners-subnet"
   resource_group_name  = var.resourceGroupName
@@ -18,13 +15,13 @@ resource "azurerm_subnet" "runners_subnet" {
 }
 
 resource "azurerm_container_group" "self_hosted_runners" {
-  depends_on = [azurerm_subnet.runners_subnet]
+  depends_on          = [azurerm_subnet.runners_subnet]
   name                = "github-runners"
   location            = var.location
   resource_group_name = var.resourceGroupName
   ip_address_type     = "Private"
 
-  os_type             = "Linux"
+  os_type    = "Linux"
   subnet_ids = [azurerm_subnet.runners_subnet.id]
 
   container {
@@ -33,7 +30,7 @@ resource "azurerm_container_group" "self_hosted_runners" {
     cpu    = "1"
     memory = "1.5"
 
-    environment_variables = {"GH_REPO_URL":var.gh_repo_url}
+    environment_variables = { "GH_REPO_URL" : var.gh_repo_url }
     secure_environment_variables = {
       GH_PAT = var.gh_pat
     }
@@ -41,8 +38,6 @@ resource "azurerm_container_group" "self_hosted_runners" {
       port     = 80 # Not open as private but required for tf creation
       protocol = "TCP"
     }
-      
-}
 
-
+  }
 }
